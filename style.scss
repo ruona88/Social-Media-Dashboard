@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/*
+font-family: 'Inter', sans-serif;
+font-weight: 400 nd 700
+*/
+
+/*Reset paddings and margins*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header, main {
+    max-width: 1600px;
+    margin: auto;
+}
+
+body {
+    background-color: hsl(230, 17%, 14%);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+/*Toggle Class*/
+body.active {
+    background-color: white;
+}
+
+header {
+    background-color: hsl(232, 19%, 15%);
+    min-height: 120px;
+    border-radius: 0px 0px 15px 15px;
+    padding: 20px 0px 80px 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+header.active {
+    background-color: hsl(225, 100%, 98%);
+}
+
+header .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+header hr {
+    display: none;
+}
+
+.header-statement h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 7px;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-statement h1.active {
+    color: hsl(230, 17%, 14%)
+}
+
+
+.header-statement p {
+    font-size: 0.8rem;
+    color: hsl(228, 34%, 66%);
+    font-weight: 700;
+}
+
+.header-statement p:active {
+    color: hsl(228, 28%, 20%);
+    display: none;
+}
+
+.header-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.header-toggle p {
+    font-size: 0.8rem;
+    color: hsl(228, 34%, 66%);
+    font-weight: 700;
+    margin-right: 11px;
+}
+
+.toggle-container {
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    padding: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out
+}
+
+.toggle-container.active {
+    background-image: linear-gradient(to right, hsl(230, 22%, 74%), hsl(230, 22%, 74%));
+}
+
+.toggle-circle {
+    width: 14px;
+    height: 14px;
+    border-radius: 50px;
+    background-color:hsl(232, 19%, 15%);
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.toggle-circle.active {
+    transform: translateX(20px);
+    background-color: white;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------
+Styling for the main content on the page*/
+main {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    top: -65px;
+    transition: all 0.3s ease-in-out;
+}
+
+.the-first-grid {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(20, 1fr);
+    grid-column-gap: 30px;
+
+    .facebook-div {
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 5;
+        text-align: center;
+        border-radius: 5px;
+        background-color: hsl(228, 28%, 20%);
+        padding: 30px 0px;
+        border-top: 5px solid hsl(208, 92%, 53%);
+    }
+
+    .twitter-div {
+        grid-row: 1 / span 1;
+        grid-column: 6 / span 5;
+        text-align: center;
+        border-radius: 5px;
+        background-color: hsl(228, 28%, 20%);
+        padding: 35px 0px;
+        border-top: 5px solid hsl(203, 89%, 53%);
+    }
+
+    .instagram-div {
+        grid-row: 1 / span 1;
+        grid-column: 11 / span 5;
+        text-align: center;
+        border-radius: 5px;
+        background-color: hsl(228, 28%, 20%);
+        padding: 35px 0px;
+        position: relative;
+        
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 5px;
+            background-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            border-radius: 10px 10px 0px 0px;
+        }
+    }
+
+    .youtube-div {
+        grid-row: 1 / span 1;
+        grid-column: 16 / span 5;
+        text-align: center;
+        border-radius: 5px;
+        background-color: hsl(228, 28%, 20%);
+        padding: 35px 0px;
+        border-top: 5px solid hsl(348, 97%, 39%);
+    }
+}
+
+/*Sttling for th content inside the grid-items*/
+.grid-item {
+    
+    .username {
+        color: hsl(228, 34%, 66%);
+        font-size: 0.7rem;
+        margin-left: 8px;
+        position: relative;
+        top: -5px;
+        display: inline-block;
+        margin-bottom: 15px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .username.active {
+        color: hsl(228, 28%, 20%);
+    }
+
+    h1 {
+        font-size: 2.9rem;
+        margin-bottom: 7px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    h1.active {
+        color:hsl(230, 17%, 14%);
+    }
+
+    p {
+        font-size: 0.7rem;
+        color: hsl(228, 34%, 66%);
+        letter-spacing: 0.3rem;
+        margin-bottom: 7px;
+        opacity: 0.7
+    }
+
+    .greenish-text {
+        color: hsl(163, 72%, 41%);
+        font-size: 0.7rem;
+        font-weight: 700;
+        position: relative;
+        top: 1.5px;
+    }
+
+    .redish-text {
+        font-size: 0.7rem;
+        color: hsl(356, 69%, 56%);
+        position: relative;
+        top: 1.5px;
+        font-weight: 700;
+    }
+}
+
+.overview {
+    margin: 20px 0px;
+    font-size: 1.9rem;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+}
+
+.overview.active {
+    color: hsl(228, 28%, 20%);
+}
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+Styling for the second div;
+*/
+
+.the-second-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(20, 1fr);
+    grid-gap: 30px;
+
+    .facebook-followers {
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 5;
+        background-color: hsl(228, 28%, 20%);
+        border-radius: 5px;
+    }
+
+    .facebook-likes {
+        grid-row: 1 / span 1;
+        grid-column: 6 / span 5;
+        background-color: hsl(228, 28%, 20%);
+        border-radius: 5px;
+    }
+
+    .instagram-likes {
+        grid-row: 1 / span 1;
+        grid-column: 11 / span 5;
+        background-color: hsl(228, 28%, 20%);
+        border-radius: 5px;
+    }
+
+    .instagram-views {
+        grid-row: 1 / span 1;
+        grid-column: 16 / span 5;
+        background-color: hsl(228, 28%, 20%);
+        border-radius: 5px;
+    }
+
+    .twitter-retweets {
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 5;
+        background-color: hsl(228, 28%, 20%);
+        border-radius: 5px;
+    }
+
+    .twitter-likes {
+        grid-row: 2 / span 1;
+        grid-column: 6 / span 5;
+        background-color: hsl(228, 28%, 20%);
+        border-radius: 5px;
+    }
+
+    .youtube-likes {
+        grid-row: 2 / span 1;
+        grid-column: 11 / span 5;
+        background-color: hsl(228, 28%, 20%);
+        border-radius: 5px;
+    }
+
+    .youtube-views {
+        grid-row: 2 / span 1;
+        grid-column: 16 / span 5;
+        background-color: hsl(228, 28%, 20%);
+        border-radius: 5px;
+    }
+}
+
+/*Styling for th items in the grid*/
+.the-second-grid-item {
+    padding: 17px 0px;
+
+    .logo-container {
+        width: 75%;
+        margin: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        
+        span {
+            color: hsl(228, 34%, 66%);
+            font-weight: 700;
+            font-size: 0.8rem;
+            transition: all 0.3s ease-in-out;
+        }
+
+        span.active {
+            color:hsl(228, 28%, 20%);
+        }
+    }
+
+    .view-numbers {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 75%;
+        margin: auto;
+        margin-top: 8px;
+
+        p {
+            font-size: 1.5rem;
+            font-weight: 700;
+            transition: all o.3s ease-in-out;
+        }
+
+        p.active {
+            color:hsl(230, 17%, 14%)
+        }
+    }
+}
+
+.greenish-text {
+    color: hsl(163, 72%, 41%);
+    font-size: 0.7rem;
+    font-weight: 700;
+    position: relative;
+    top: 2.0px;
+}
+
+.redish-text {
+    font-size: 0.7rem;
+    color: hsl(356, 69%, 56%);
+    position: relative;
+    top: 1.5px;
+    font-weight: 700;
+}
+
+/*Setting for the hovr state*/
+.the-second-grid-item:hover {
+    background-color: hsl(228, 12%, 44%);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.the-second-grid-item.active {
+    background-color: hsl(225, 100%, 98%);
+}
+
+.grid-item:hover {
+    background-color: hsl(228, 12%, 44%);
+    cursor: pointer;
+}
+
+.grid-item.active {
+    background-color: hsl(225, 100%, 98%);
+}

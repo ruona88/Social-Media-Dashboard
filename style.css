@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+/*
+font-family: 'Inter', sans-serif;
+font-weight: 400 nd 700
+*/
+/*Reset paddings and margins*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header, main {
+  max-width: 1600px;
+  margin: auto;
+}
+
+body {
+  background-color: #1e202a;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+/*Toggle Class*/
+body.active {
+  background-color: white;
+}
+
+header {
+  background-color: #1f212e;
+  min-height: 120px;
+  border-radius: 0px 0px 15px 15px;
+  padding: 20px 0px 80px 0px;
+  transition: all 0.3s ease-in-out;
+}
+
+header.active {
+  background-color: #f5f7ff;
+}
+
+header .container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+header hr {
+  display: none;
+}
+
+.header-statement h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 7px;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-statement h1.active {
+  color: #1e202a;
+}
+
+.header-statement p {
+  font-size: 0.8rem;
+  color: #8b97c6;
+  font-weight: 700;
+}
+
+.header-statement p:active {
+  color: #252a41;
+  display: none;
+}
+
+.header-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.header-toggle p {
+  font-size: 0.8rem;
+  color: #8b97c6;
+  font-weight: 700;
+  margin-right: 11px;
+}
+
+.toggle-container {
+  width: 40px;
+  height: 20px;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, #378fe6, #3eda82);
+  padding: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle-container.active {
+  background-image: linear-gradient(to right, #aeb3cb, #aeb3cb);
+}
+
+.toggle-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50px;
+  background-color: #1f212e;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-circle.active {
+  transform: translateX(20px);
+  background-color: white;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------
+Styling for the main content on the page*/
+main {
+  width: 80%;
+  margin: auto;
+  position: relative;
+  top: -65px;
+  transition: all 0.3s ease-in-out;
+}
+
+.the-first-grid {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: repeat(20, 1fr);
+  grid-column-gap: 30px;
+}
+
+.the-first-grid .facebook-div {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 5;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #252a41;
+  padding: 30px 0px;
+  border-top: 5px solid #198ff5;
+}
+
+.the-first-grid .twitter-div {
+  grid-row: 1 / span 1;
+  grid-column: 6 / span 5;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #252a41;
+  padding: 35px 0px;
+  border-top: 5px solid #1ca0f2;
+}
+
+.the-first-grid .instagram-div {
+  grid-row: 1 / span 1;
+  grid-column: 11 / span 5;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #252a41;
+  padding: 35px 0px;
+  position: relative;
+}
+
+.the-first-grid .instagram-div::before {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-image: linear-gradient(to right, #fdc468, #df4996);
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.the-first-grid .youtube-div {
+  grid-row: 1 / span 1;
+  grid-column: 16 / span 5;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #252a41;
+  padding: 35px 0px;
+  border-top: 5px solid #c4032a;
+}
+
+/*Sttling for th content inside the grid-items*/
+.grid-item .username {
+  color: #8b97c6;
+  font-size: 0.7rem;
+  margin-left: 8px;
+  position: relative;
+  top: -5px;
+  display: inline-block;
+  margin-bottom: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.grid-item .username.active {
+  color: #252a41;
+}
+
+.grid-item h1 {
+  font-size: 2.9rem;
+  margin-bottom: 7px;
+  transition: all 0.3s ease-in-out;
+}
+
+.grid-item h1.active {
+  color: #1e202a;
+}
+
+.grid-item p {
+  font-size: 0.7rem;
+  color: #8b97c6;
+  letter-spacing: 0.3rem;
+  margin-bottom: 7px;
+  opacity: 0.7;
+}
+
+.grid-item .greenish-text {
+  color: #1db489;
+  font-size: 0.7rem;
+  font-weight: 700;
+  position: relative;
+  top: 1.5px;
+}
+
+.grid-item .redish-text {
+  font-size: 0.7rem;
+  color: #dc414c;
+  position: relative;
+  top: 1.5px;
+  font-weight: 700;
+}
+
+.overview {
+  margin: 20px 0px;
+  font-size: 1.9rem;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+
+.overview.active {
+  color: #252a41;
+}
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------
+Styling for the second div;
+*/
+.the-second-grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(20, 1fr);
+  grid-gap: 30px;
+}
+
+.the-second-grid .facebook-followers {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 5;
+  background-color: #252a41;
+  border-radius: 5px;
+}
+
+.the-second-grid .facebook-likes {
+  grid-row: 1 / span 1;
+  grid-column: 6 / span 5;
+  background-color: #252a41;
+  border-radius: 5px;
+}
+
+.the-second-grid .instagram-likes {
+  grid-row: 1 / span 1;
+  grid-column: 11 / span 5;
+  background-color: #252a41;
+  border-radius: 5px;
+}
+
+.the-second-grid .instagram-views {
+  grid-row: 1 / span 1;
+  grid-column: 16 / span 5;
+  background-color: #252a41;
+  border-radius: 5px;
+}
+
+.the-second-grid .twitter-retweets {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 5;
+  background-color: #252a41;
+  border-radius: 5px;
+}
+
+.the-second-grid .twitter-likes {
+  grid-row: 2 / span 1;
+  grid-column: 6 / span 5;
+  background-color: #252a41;
+  border-radius: 5px;
+}
+
+.the-second-grid .youtube-likes {
+  grid-row: 2 / span 1;
+  grid-column: 11 / span 5;
+  background-color: #252a41;
+  border-radius: 5px;
+}
+
+.the-second-grid .youtube-views {
+  grid-row: 2 / span 1;
+  grid-column: 16 / span 5;
+  background-color: #252a41;
+  border-radius: 5px;
+}
+
+/*Styling for th items in the grid*/
+.the-second-grid-item {
+  padding: 17px 0px;
+}
+
+.the-second-grid-item .logo-container {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.the-second-grid-item .logo-container span {
+  color: #8b97c6;
+  font-weight: 700;
+  font-size: 0.8rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.the-second-grid-item .logo-container span.active {
+  color: #252a41;
+}
+
+.the-second-grid-item .view-numbers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin: auto;
+  margin-top: 8px;
+}
+
+.the-second-grid-item .view-numbers p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: all o 0.3s ease-in-out;
+}
+
+.the-second-grid-item .view-numbers p.active {
+  color: #1e202a;
+}
+
+.greenish-text {
+  color: #1db489;
+  font-size: 0.7rem;
+  font-weight: 700;
+  position: relative;
+  top: 2.0px;
+}
+
+.redish-text {
+  font-size: 0.7rem;
+  color: #dc414c;
+  position: relative;
+  top: 1.5px;
+  font-weight: 700;
+}
+
+/*Setting for the hovr state*/
+.the-second-grid-item:hover {
+  background-color: #63687e;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.the-second-grid-item.active {
+  background-color: #f5f7ff;
+}
+
+.grid-item:hover {
+  background-color: #63687e;
+  cursor: pointer;
+}
+
+.grid-item.active {
+  background-color: #f5f7ff;
+}
+/*# sourceMappingURL=style.css.map */
