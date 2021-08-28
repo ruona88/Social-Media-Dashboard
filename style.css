@@ -112,8 +112,6 @@ header hr {
   background-color: white;
 }
 
-/*------------------------------------------------------------------------------------------------------------------------------------
-Styling for the main content on the page*/
 main {
   width: 80%;
   margin: auto;
@@ -387,5 +385,163 @@ Styling for the second div;
 
 .grid-item.active {
   background-color: #f5f7ff;
+}
+
+/*
+________________________________________________________________________________________________________________________________
+Media Queries
+*/
+@media only screen and (max-width: 1050px) {
+  /*Change th first grid div to a ywo column grid*/
+  header {
+    padding: 40px 0px 90px 0px;
+  }
+  main {
+    top: -50px;
+  }
+  .the-first-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 30px;
+  }
+  .the-first-grid .facebook-div {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 5;
+  }
+  .the-first-grid .twitter-div {
+    grid-row: 1 / span 1;
+    grid-column: 6 / span 5;
+  }
+  .the-first-grid .instagram-div {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 5;
+  }
+  .the-first-grid .youtube-div {
+    grid-row: 2 / span 1;
+    grid-column: 6 / span 5;
+  }
+  /*Change the second grid div to a two column grid*/
+  .the-second-grid {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(20, 1fr);
+  }
+  .the-second-grid .facebook-followers {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 10;
+  }
+  .the-second-grid .facebook-likes {
+    grid-row: 1 / span 1;
+    grid-column: 11 / span 10;
+  }
+  .the-second-grid .instagram-likes {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 10;
+  }
+  .the-second-grid .instagram-views {
+    grid-row: 2 / span 1;
+    grid-column: 11 / span 10;
+  }
+  .the-second-grid .twitter-retweets {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 10;
+  }
+  .the-second-grid .twitter-likes {
+    grid-row: 3 / span 1;
+    grid-column: 11 / span 10;
+  }
+  .the-second-grid .youtube-likes {
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 10;
+  }
+  .the-second-grid .youtube-views {
+    grid-row: 4 / span 1;
+    grid-column: 11 / span 10;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header-statement h1 {
+    font-size: 2.3rem;
+  }
+  header .container p {
+    font-size: 1.4rem;
+  }
+  header .container hr {
+    display: block;
+    width: 100%;
+    margin: 20px 0px;
+  }
+  .header-toggle {
+    justify-content: space-between;
+    width: 100%;
+  }
+  /*Change the grids to single column grid*/
+  .the-first-grid {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+  }
+  .the-first-grid .facebook-div {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+  }
+  .the-first-grid .twitter-div {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+  }
+  .the-first-grid .instagram-div {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
+  }
+  .the-first-grid .youtube-div {
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 1;
+  }
+  .the-second-grid {
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: 1fr;
+  }
+  .the-second-grid .facebook-followers {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+  }
+  .the-second-grid .facebook-likes {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+  }
+  .the-second-grid .instagram-likes {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
+  }
+  .the-second-grid .instagram-views {
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 1;
+  }
+  .the-second-grid .twitter-retweets {
+    grid-row: 5 / span 1;
+    grid-column: 1 / span 1;
+  }
+  .the-second-grid .twitter-likes {
+    grid-row: 6 / span 1;
+    grid-column: 1 / span 1;
+  }
+  .the-second-grid .youtube-likes {
+    grid-row: 7 / span 1;
+    grid-column: 1 / span 1;
+  }
+  .the-second-grid .youtube-views {
+    grid-row: 8 / span 1;
+    grid-column: 1 / span 1;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  html {
+    font-size: 14px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
